@@ -1,4 +1,4 @@
-const staticDevCoffee = "recipes-app";
+const staticRecipes = "recipes-app";
 const assets = [
   "/",
   "/index.html",
@@ -14,7 +14,7 @@ const assets = [
 
 self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
-    caches.open(staticDevCoffee).then(cache => {
+    caches.open(staticRecipes).then(cache => {
       cache.addAll(assets);
     })
   );
